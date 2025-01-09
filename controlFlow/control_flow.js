@@ -3,6 +3,8 @@ let accessLevel;
 let isLoggedIn = true;
 let userType = "suscriber";
 let userCategory;
+let isAuthenticated = true;
+let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
  
 if (userRole === "admin") {
     accessLevel = "Full access granted";
