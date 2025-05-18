@@ -30,6 +30,20 @@
     document.getElementById('books').innerHTML = booksDiv.join('');
 }
 
+
+
+function editbook(index) {
+    const book = books[index];
+    document.getElementById('bookName').value = book.name;
+    document.getElementById('authorName').value = book.authorName;
+    document.getElementById('bookDescription').value = book.bookDescription;
+    document.getElementById('pagesNumber').value = book.pagesNumber;
+    books.splice(index, 1); // Remove old entry
+    showbooks(); // Refresh list
+  }
+
+
+  
  function clearInputs() {
             document.getElementById('bookName').value = '';
             document.getElementById('authorName').value = '';
